@@ -3,15 +3,30 @@
  <head>
  <meta charset=utf-8>
  <title>kompis1</title>
+ <link href="./kompis2.css" rel="stylesheet" type="text/css">
  </head>
  <body>
   <h1>säg hej till Kompis</h1>
-  <div>
-   <div>
-     <input placeholder="something"></input>
+  <div class="inputsektion">
+   <div class="inputs">
+     <input placeholder="tassar"></input>
    </div>
-   <button>Add</button>
+    <button class="addOption">Här</button>
   </div>
-  <button>Go!</button>
+  <div class="resultSection"></div>
+  <button>Spring!</button>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+   $(function(){
+     $('.resultSection').hide()
+
+       var add_option = function(){
+         $('.inputs').append('<input></input>')
+       }
+
+       $('.addOption').click(add_option)
+   })
+  </script>
  </body>
 </html>
